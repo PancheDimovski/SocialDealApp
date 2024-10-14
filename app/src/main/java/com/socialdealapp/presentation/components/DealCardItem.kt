@@ -23,7 +23,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.socialdealapp.domain.currency.model.CurrencySymbol
 import com.socialdealapp.domain.deals.model.DealsModel
 import com.socialdealapp.ui.theme.BlueLight
 import com.socialdealapp.ui.theme.GreenLight
@@ -32,14 +31,10 @@ import com.socialdealapp.ui.theme.GreenLight
 fun DealCardItem(
     data: DealsModel,
     onToggleFavorite: (String, Boolean) -> Unit,
-    currency: String?,
+    currencySymbol: String,
     modifier: Modifier = Modifier,
     onNavigate: ((String) -> Unit)? = null,
 ) {
-    val currencySymbol =
-        if (currency == CurrencySymbol.EURO.symbol) CurrencySymbol.EURO.symbol
-        else CurrencySymbol.DOLLAR.symbol
-
     var clickableModifier = modifier
         .padding(8.dp)
         .clip(RoundedCornerShape(8.dp))
@@ -151,7 +146,7 @@ fun DealCardItemPreview() {
             ),
             onNavigate = {},
             onToggleFavorite = { _, _ -> },
-            currency = "Euro"
+            currencySymbol = "Euro"
         )
     }
 }

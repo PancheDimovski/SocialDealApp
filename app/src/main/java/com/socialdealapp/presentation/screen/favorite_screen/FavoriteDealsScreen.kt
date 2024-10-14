@@ -50,7 +50,7 @@ private fun DealFavoriteCard(
         modifier = modifier,
         data = data,
         onToggleFavorite = onToggleFavorite,
-        currency = currencySymbol
+        currencySymbol = currencySymbol
     )
 }
 

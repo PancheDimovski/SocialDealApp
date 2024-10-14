@@ -73,7 +73,7 @@ fun DealCard(
         data = data,
         onNavigate = onNavigate,
         onToggleFavorite = onToggleFavorite,
-        currency = currencySymbol
+        currencySymbol = currencySymbol
     )
 }
 

@@ -78,6 +78,8 @@ fun CurrencyToggle(
 @Composable
 fun CurrencyTogglePreview() {
     MaterialTheme {
-        CurrencyToggle(modifier = Modifier, isChecked = false, currencySymbol =  CurrencySymbol.EURO, onCheckChanged =  {})
+        CurrencyToggle(modifier = Modifier, isChecked = false,
+            currencySymbol = CurrencySymbol.EURO,
+            onCheckChanged = {})
     }
 }
