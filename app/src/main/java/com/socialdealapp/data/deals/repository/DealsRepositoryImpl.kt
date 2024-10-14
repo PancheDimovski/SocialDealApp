@@ -26,7 +26,7 @@ class DealsRepositoryImpl(
             dealsDao.insertDeals(deals = dealsData.deals.map {
 
                 val dealDbData = dealsDao.getDealByUniqueId(it.unique)
-                val isAddedToFavorite = dealDbData.favoriteDeal ?: false
+                val isAddedToFavorite = dealDbData?.favoriteDeal ?: false
 
                 DealsEntity(
                     uniqueId = it.unique,
